@@ -77,7 +77,7 @@ Press Ctrl + C to terminate the process.
 
 - ASP.NET Core Web API
 - C#
-- xUnit for testing
+- NUnit for testing
 - Swagger for API documentation
 
 If you encounter any issues running the code, feel free to reach out
