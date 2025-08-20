@@ -37,7 +37,7 @@ The API processes this data and provides endpoints to:
 
 5. Test the API using Swagger UI or any HTTP client like Postman.
 
-6. To Run the tests, use the command:
+6. To run the tests, use the command:
    
 	dotnet test
 7. To populate the data - Send a POST request to /api/data with a JSON array of people:
