@@ -151,7 +151,7 @@ The API processes this data and provides endpoints to:
    
 	dotnet test
 7. To populate the data - Send a POST request to /api/data with a JSON array of people:
-
+```json
 [
   "{\"name\":\"John\",\"age\":35,\"height\":180,\"city\":\"London\"}",
   "{\"name\":\"Sarah\",\"city\":\"Paris\"}",
@@ -159,7 +159,7 @@ The API processes this data and provides endpoints to:
   "{\"name\":\"Sam\",\"age\":31}",
   "{\"name\":\"Sam\",\"city\":\"Dublin\"}"
 ]
-
+```
 8. To list people over age 25 -  Send a GET request to /api/people-over-25
 
 9. To count how many people live in each city -  Send a GET request to /api/cities
