@@ -1,4 +1,114 @@
-﻿# Assignment API
+# Question
+
+### Objective
+You will be given a list where each element of the list is a string that contains JSON data. Example:
+```json
+{"name": "John","age": 35,"height": 180,"city": "London"}
+```
+
+Each JSON object will always have a name field, but none of the other fields are required to be in the entry. Example:
+```json
+{"name": "Sarah","city": "Paris"}
+```
+or even
+```json
+{"name": "Emily"}
+```
+
+There might be multiple entries for the same person that contain different data fields. Example:
+```json
+{"name": "Sam","age": 31}
+```
+and later
+```json
+{"name": "Sam", "city": "Dublin"}
+```
+
+There will never be a JSON object that contains data that contradicts a previous entry.
+
+### Instructions
+1. **Data Processing**: Given this list, process the data to output the following:
+   - A list of people who are older than 25, sorted alphabetically by name.
+   - A list of all the cities in the given data and how many people in the given data live in each city.
+   - Calculate the average age of the people in the dataset.
+   - Identify and list any duplicate entries based on the `name` field.
+
+2. **API Development**:
+   - Create an HTTP REST API to handle this data processing.
+   - Implement the following endpoints:
+     - `POST /api/data`: Accepts a JSON payload containing the list of JSON strings, processes the data, and stores it in memory.
+     - `GET /api/people-over-25`: Returns a JSON list of people who are older than 25, sorted alphabetically by name.
+     - `GET /api/cities`: Returns a JSON object with all the cities and the count of how many people live in each city.
+     - `GET /api/average-age`: Returns the average age of the people in the dataset.
+     - `GET /api/duplicates`: Returns a JSON list of any duplicate entries based on the `name` field.
+   
+### Requirements
+- Use C# for the entire implementation.
+- Include instructions on how to run and test your API in a README file.
+- Provide generated API documentation using an OpenAPI spec, or similar.
+- Write production-ready code.
+
+### Example API Endpoints
+
+**POST /api/data**
+Request body:
+```json
+[
+  "{\"name\":\"John\",\"age\":35,\"height\":180,\"city\":\"London\"}",
+  "{\"name\":\"Sarah\",\"city\":\"Paris\"}",
+  "{\"name\":\"Emily\"}",
+  "{\"name\":\"Sam\",\"age\":31}",
+  "{\"name\":\"Sam\",\"city\":\"Dublin\"}"
+]
+```
+
+**GET /api/people-over-25**
+Response:
+```json
+[
+  {"name": "John", "age": 35, "height": 180, "city": "London"},
+  {"name": "Sam", "age": 31, "city": "Dublin"}
+]
+```
+
+**GET /api/cities**
+Response:
+```json
+{
+  "London": 1,
+  "Paris": 1,
+  "Dublin": 1
+}
+```
+
+**GET /api/average-age**
+Response:
+```json
+{
+  "averageAge": 33
+}
+```
+
+**GET /api/duplicates**
+Response:
+```json
+[
+  {"name": "Sam", "age": 31},
+  {"name": "Sam", "city": "Dublin"}
+]
+```
+
+### Evaluation Criteria
+- Correctness and completeness of the implemented API and data processing.
+- Code quality and adherence to best practices.
+- Proper error handling and input validation.
+- Clarity and completeness of the documentation.
+
+We look forward to reviewing your submission. Good luck!
+
+ 
+ 
+ # Assignment API
 
 This project is a simple yet robust ASP.NET Core Web API designed to process and analyze person data from a list of JSON strings. It supports loading data, filtering people over age 25, calculating average age, counting cities, and identifying duplicates.
 
