@@ -190,6 +190,10 @@ Press Ctrl + C to terminate the process.
 - NUnit for testing
 - Swagger for API documentation
 
+## Results
+
+https://github.com/sairamk22/Assignment/blob/master/Swagger_Results.mp4
+
 If you encounter any issues running the code, feel free to reach out
 Cheers,
 Sai Ram Kaleru
